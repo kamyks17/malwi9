@@ -1,0 +1,151 @@
+
+.protest-riot-regular {
+  font-family: "Protest Riot", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Mobilki */
+@media only screen and (max-width: 767px) {
+  #textContainer {
+    font-size: 30px;
+    text-align: center;
+    align-items: center;
+    
+  }
+  img {
+    padding-top: 30px;
+    width: 20%;
+  }
+}
+
+/* Tablety */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  #textContainer {
+    font-size: 40px;
+    text-align: center;
+    align-items: center;
+  }
+  img {
+    padding-top: 20px;
+    width: 12%;
+  }
+}
+
+/* Laptopy */
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  #textContainer {
+    font-size: 45px;
+    text-align: center;
+    align-items: center;
+  }
+  img {
+    padding-top: 20px;
+    width: 8%;
+  }
+}
+
+/* PCty */
+@media only screen and (min-width: 1440px) {
+  #textContainer {
+    font-size: 50px;
+    text-align: center;
+    align-items: center;
+  }
+  img {
+    padding-top: 50px;
+    width: 5%;
+  }
+}
+
+
+
+body {
+    font-family: "Protest Riot", sans-serif;
+    color: white;
+    text-align: center;
+    text-shadow: 3px 3px 3px black;
+    background-image: url(clouds.gif);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-position: center;
+  }
+
+  .text-animation {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+  }
+
+  .show {
+    opacity: 1;
+  }
+
+
+
+#animationButton {
+  margin-top: 260px;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  backface-visibility: hidden;
+  border-radius: .375rem;
+  border-style: solid;
+  border-width: .125rem;
+  border-color: white;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular,Helvetica,sans-serif;
+  font-size: 1.700rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  line-height: 1.3;
+  padding: .875rem 1.125rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transform: translateZ(0) scale(1);
+  transition: transform .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#animationButton:not(:disabled):hover {
+  transform: scale(1.05);
+}
+
+#animationButton:not(:disabled):hover:active {
+  transform: scale(1.05) translateY(.125rem);
+}
+
+#animationButton:focus {
+  outline: 0 solid transparent;
+}
+
+#animationButton:focus:before {
+  content: "";
+  left: calc(-1*.375rem);
+  pointer-events: none;
+  position: absolute;
+  top: calc(-1*.375rem);
+  transition: border-radius;
+  user-select: none;
+}
+
+#animationButton:focus:not(:focus-visible) {
+  outline: 0 solid transparent;
+}
+
+#animationButton:focus:not(:focus-visible):before {
+  border-width: 0;
+}
+
+#animationButton:not(:disabled):active {
+  transform: translateY(.125rem);
+}
